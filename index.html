@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <div class="tools">
+    <div class="pencil">
+      <img src="./NewIcons/Black_Pencil.svg" class="pencil tool active" alt="" onclick="handletoolChange('pencil')">
+    </div>
+    <div class="eraser">
+      <img src="./NewIcons/Eraser.svg" class="eraser tool" alt="" onclick="handletoolChange('eraser')">
+    </div>
+    <div class="sticky">
+      <img src="./NewIcons//StickyNote.svg" class="tool" alt="">
+    </div>
+    <div class="upload">
+      <a href="" id="fileSelector">
+        <img src="./NewIcons/Photo.svg" class="tool" alt="">
+      </a>
+      <input type="file" name="" id="fileInput" accept="image/*">;
+    </div>
+    <div class= "download">
+      <a>
+      <img src ="./NewIcons/Download.svg" class="tool">
+      </a>
+    </div>
+    <div class="undo ">
+      <img src ="./NewIcons/Undo.svg" class="tool">
+
+
+    </div>
+  <div class ="redo">
+    <img src = "./NewIcons/Redo.svg" class="tool">
+    </div>
+
+  </div>
+  <canvas class="board"></canvas>
+  <script>
+    var board = document.querySelector(".board");
+    // gives viewPort Height
+    board.height = window.innerHeight;
+    // gives viewPort Width
+    board.width = window.innerWidth;
+    // to get RenderingContext2D
+    var ctx = board.getContext("2d");
+  </script>
+ 
+  <script src="sticky.js"></script>
+  <script src="drawingtools.js"></script>
+  <script src = "download.js"></script>
+  <script src="image.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
